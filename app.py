@@ -2,12 +2,11 @@ import os
 import streamlit as st
 from dotenv import load_dotenv
 
-# LangChain 最新仕様
-from langchain.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain.schema import SystemMessage, HumanMessage
 
 # --- 環境変数の読み込み ---
-load_dotenv()  # プロジェクト直下の .env を読み込む
+load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # --- LLM 初期化 ---
